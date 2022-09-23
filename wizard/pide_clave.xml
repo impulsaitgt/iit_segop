@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+
+<odoo>
+    <!--Vista formulario -->
+    <record id="pide_clave_form_view_cancela" model="ir.ui.view">
+        <field name="name">pide.clave.form.view.cancela</field>
+        <field name="model">seg.pide.clave.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Requiere autorizacion por Contraseña">
+                <group>
+                   <field name="seg_clave" password="True"/>
+                </group>
+                <footer>
+                    <button string="Cancelar" class="btn_secondary" special="cancel"/>
+                    <button name="action_clave_cancela" type="object" string="Aceptar" class="oe_highlight btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!--Vista formulario -->
+    <record id="pide_clave_form_view_borrador" model="ir.ui.view">
+        <field name="name">pide.clave.form.view.borrador</field>
+        <field name="model">seg.pide.clave.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Requiere autorizacion por Contraseña">
+                <group>
+                   <field name="seg_clave" password="True"/>
+                </group>
+                <footer>
+                    <button string="Cancelar" class="btn_secondary" special="cancel"/>
+                    <button name="action_clave_borrador" type="object" string="Aceptar" class="oe_highlight btn_primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+<!--        &lt;!&ndash;Vista formulario &ndash;&gt;-->
+<!--    <record id="pide_clave_form_view_publica" model="ir.ui.view">-->
+<!--        <field name="name">pide.clave.form.view.publica</field>-->
+<!--        <field name="model">seg.pide.clave.wizard</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Requiere autorizacion por Contraseña">-->
+<!--                <group>-->
+<!--                   <field name="seg_clave" password="True"/>-->
+<!--                </group>-->
+<!--                <footer>-->
+<!--                    <button string="Cancelar" class="btn_secondary" special="cancel"/>-->
+<!--                    <button name="action_clave_publica" type="object" string="Aceptar" class="oe_highlight btn_primary"/>-->
+<!--                </footer>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--            &lt;!&ndash;Vista formulario &ndash;&gt;-->
+<!--    <record id="pide_clave_form_view_ncred" model="ir.ui.view">-->
+<!--        <field name="name">pide.clave.form.view.ncred</field>-->
+<!--        <field name="model">seg.pide.clave.wizard</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Requiere autorizacion por Contraseña">-->
+<!--                <group>-->
+<!--                   <field name="seg_clave" password="True"/>-->
+<!--                </group>-->
+<!--                <footer>-->
+<!--                    <button string="Cancelar" class="btn_secondary" special="cancel"/>-->
+<!--                    <button name="action_clave_ncred" type="object" string="Aceptar" class="oe_highlight btn_primary"/>-->
+<!--                </footer>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <!--Accion cancelar-->
+    <record id="action_pide_clave_cancela" model="ir.actions.act_window">
+        <field name="name">Pide Clave cancela</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">seg.pide.clave.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pide_clave_form_view_cancela"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_pide_clave_borrador" model="ir.actions.act_window">
+        <field name="name">Pide Clave borrador</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">seg.pide.clave.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="pide_clave_form_view_borrador"/>
+        <field name="target">new</field>
+    </record>
+
+
+<!--    <record id="action_pide_clave_publica" model="ir.actions.act_window">-->
+<!--        <field name="name">Pide Clave publicar</field>-->
+<!--        <field name="type">ir.actions.act_window</field>-->
+<!--        <field name="res_model">seg.pide.clave.wizard</field>-->
+<!--        <field name="view_mode">form</field>-->
+<!--        <field name="view_id" ref="pide_clave_form_view_publica"/>-->
+<!--        <field name="target">new</field>-->
+<!--    </record>-->
+
+<!--    <record id="action_pide_clave_ncred" model="ir.actions.act_window">-->
+<!--        <field name="name">Pide Clave Nota de Credito</field>-->
+<!--        <field name="type">ir.actions.act_window</field>-->
+<!--        <field name="res_model">seg.pide.clave.wizard</field>-->
+<!--        <field name="view_mode">form</field>-->
+<!--        <field name="view_id" ref="pide_clave_form_view_ncred"/>-->
+<!--        <field name="target">new</field>-->
+<!--    </record>-->
+
+
+</odoo>

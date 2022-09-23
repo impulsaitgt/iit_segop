@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+accesos_seg_aps_administrador,Acceso a operaciones seguridad,model_seg_res_partner_ops,seg_group_administrador,1,1,1,1
+accesos_seg_pide_clave_administrador,Acceso a pedir clave seguridad,model_seg_pide_clave_wizard,seg_group_administrador,1,1,1,1

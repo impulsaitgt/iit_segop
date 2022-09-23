@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<odoo>
+    <record id="categoria_modulo_seg" model="ir.module.category">
+        <field name="name">Seguridad especial</field>
+    </record>
+
+    <record id="seg_group_administrador" model="res.groups">
+        <field name="name">Administrador Seguridad</field>
+        <field name="category_id" ref="categoria_modulo_seg"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+
+</odoo>

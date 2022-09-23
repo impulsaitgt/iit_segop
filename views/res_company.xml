@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<odoo>
+    <record id="res_company_form_ihnerit" model="ir.ui.view">
+        <field name="name">res.company.inherited</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <page name="general_info" position="after">
+                <page name="seg" string="Seguridad especial">
+                    <notebook string="Claves por operacion">
+                        <page name="seg_ops" string="Claves">
+                            <field name="seg_ops" widget="section_and_note_many2many" mode="tree">
+                                <tree editable="botoom" string="Claves">
+                                    <control>
+                                        <create name="agrega_operacion" string="Agrega Operacion"/>
+                                    </control>
+                                    <field name="seg_journal_id"/>
+                                    <field name="seg_operacion"/>
+                                    <field name="seg_clave" password="True"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

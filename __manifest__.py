@@ -11,5 +11,10 @@
         "account",
     ],
     'data': [
+        "security/seg_security.xml",
+        "security/ir.model.access.csv",
+        "wizard/pide_clave.xml",
+        "views/res_company.xml",
+        "views/account_journal.xml"
     ]
 }
